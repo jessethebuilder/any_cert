@@ -1,0 +1,62 @@
+<%= form_for(@certificate) do |f| %>
+  <%= error_explanation(@certificate, :include_explanation => false) %>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h2>From:</h2>
+
+      <% if user_signed_in? %>
+
+      <% else %>
+        <%= render partial: 'devise/sign_in_sign_up' %>
+      <% end %>
+    </div><!--col-->
+    <div class="col-md-4"></div><!--col-->
+    <div class="col-md-4"></div><!--col-->
+
+  </div><!--row-->
+
+  <div class="row">
+    <% unless store.offers_services %>
+      <div class="col-md-4"></div>
+    <% end %>
+
+    <div class="col-md-4">
+      <div class="form-group">
+        <%= f.label :amount, 'Gift Amount', :class => 'control-label' %>
+        <div class="input-group">
+          <span class="input-group-addon">$</span>
+          <%= f.text_field :amount, :class => 'form-control money_control',
+                           :placeholder => "$#{store.minimum_amount} or more.." %>
+          <span class="input-group-addon">.00</span>
+        </div>
+      </div><!--fg-->
+    </div><!--col-->
+
+    <% if store.offers_services %>
+      <div class="col-md-4">
+        <h3>And/Or select a service and number of visits<br>
+        <small>(yes, you can gift both)</small></h3>
+      </div><!--col-->
+
+      <div class="col-md-4 well">
+        <div class="form-group">
+          <%= f.label :service_id, 'Service', :class => 'control-label' %>
+          <%= f.select :service_id, for_select(Service.active, :name, :id), {:include_blank => 'Select a Service to Gift'},
+                       :class => 'form-control' %>
+        </div><!--fg-->
+
+        <div class="form-group">
+          <%= f.label :service_count, 'Number of Visits', :class => 'control-label' %>
+          <%= f.number_field :service_count, :class => 'form-control number_control', :min => 0, :value => 0 %>
+        </div><!--fg-->
+      </div><!--col-->
+    <% end %>
+  </div><!--row-->
+
+  <div class="row">
+    <div class="form-group">
+      <%= f.submit %>
+    </div><!--fg-->
+  </div><!--row-->
+<% end %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @certificate.user_id %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @certificate.amount %>
+</p>
+
+<p>
+  <strong>Giver:</strong>
+  <%= @certificate.giver_id %>
+</p>
+
+<p>
+  <strong>Giver name:</strong>
+  <%= @certificate.giver_name %>
+</p>
+
+<%= link_to 'Edit', edit_certificate_path(@certificate) %> |
+<%= link_to 'Back', certificates_path %>

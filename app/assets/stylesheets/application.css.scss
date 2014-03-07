@@ -1,0 +1,22 @@
+//Certificate
+#new_certificate{
+//  text-align: center;
+}
+
+//Forms
+.money_control{
+  font-weight: 800;
+  text-align: right;
+}
+.number_control{
+  text-align: right;
+  font-weight: 800;
+}
+
+
+/*
+ *= require_self
+ *= require_tree .
+ */
+
+@import 'bootstrap';
