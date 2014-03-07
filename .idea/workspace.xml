@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="658f66b7-51f3-40a7-87f6-310543bd8280" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/cert.iml" afterPath="$PROJECT_DIR$/.idea/cert.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cert.iws" />
@@ -72,7 +71,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="10" selection-start="1131" selection-end="1131" vertical-scroll-proportion="1.3686441" vertical-offset="0" max-vertical-offset="1428">
+            <state line="38" column="38" selection-start="1159" selection-end="1159" vertical-scroll-proportion="0.6122881" vertical-offset="357" max-vertical-offset="1428">
               <folding />
             </state>
           </provider>
@@ -90,7 +89,7 @@
       <file leaf-file-name="Gemfile.lock" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile.lock">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="5270">
+            <state line="7" column="0" selection-start="178" selection-end="178" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="5287">
               <folding />
             </state>
           </provider>
@@ -703,6 +702,11 @@
       <created>1393897857207</created>
       <updated>1393897857207</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit&#10;">
+      <created>1394169653305</created>
+      <updated>1394169653305</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -743,6 +747,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Initial commit&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1081,7 +1087,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile.lock">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="5270">
+        <state line="7" column="0" selection-start="178" selection-end="178" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="5287">
           <folding />
         </state>
       </provider>
@@ -1102,7 +1108,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="10" selection-start="1131" selection-end="1131" vertical-scroll-proportion="1.3686441" vertical-offset="0" max-vertical-offset="1428">
+        <state line="38" column="38" selection-start="1159" selection-end="1159" vertical-scroll-proportion="0.6122881" vertical-offset="357" max-vertical-offset="1428">
           <folding />
         </state>
       </provider>
