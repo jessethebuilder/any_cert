@@ -7,7 +7,7 @@ Cert::Application.routes.draw do
 
   devise_for :users, :controller => {:omniauth_callbacks => 'omniauth_callbacks'}
 
-  mount FarmTools::Engine, :at => 'address'
+  #mount FarmTools::Engine, :at => 'address'
 
   root 'certificates#new'
 end
