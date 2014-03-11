@@ -1,5 +1,6 @@
 module ApplicationHelper
   include HtmlTools
+  include RestHelper
 
   def store
     Store.first || Store.new
@@ -33,5 +34,26 @@ module ApplicationHelper
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:user]
   end
+
+  ##OAuth
+  #def oauth
+  #  @oauth ||= Koala::Facebook::OAuth.new(store.facebook_id, store.facebook_secret)
+  #end
+  #
+  #def access_token_code_url(callback_url)
+  #  oauth.url_for_oauth_code(:permissions => facebook_permissions, :redirect_uri => callback_url)
+  #end
+  #
+  #def access_token(url)
+  #
+  #end
+  #
+  #
+  ##Facebook Helpers (using Koala)
+  #def fb_api
+  #  @fb_api = Koala::Facebook::API.new()
+  #end
+
+
 
 end

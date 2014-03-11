@@ -1,3 +1,8 @@
+//Global
+body{
+  padding-top: 50px;
+}
+
 //Certificate
 #new_certificate{
 //  text-align: center;
@@ -11,6 +16,9 @@
 .number_control{
   text-align: right;
   font-weight: 800;
+}
+.custom_button:hover{
+  opacity: 0.75;
 }
 
 

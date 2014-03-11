@@ -1,0 +1,15 @@
+<div id="certificate_amount" class="form-group">
+  <%= form_for(@certificate) do |f| %>
+    <%= error_explanation(@certificate, :include_explanation => false) %><%= f.label :amount, 'Gift Amount', :class => 'control-label' %>
+
+    <div class="input-group">
+      <span class="input-group-addon">$</span>
+      <%= f.text_field :amount, :class => 'form-control money_control',
+                     :placeholder => "$#{store.minimum_amount} or more.." %>
+      <span class="input-group-addon">.00</span>
+    </div>
+  <% end %>
+</div><!--fg-->
+
+
+

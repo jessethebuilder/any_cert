@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140307035146) do
+ActiveRecord::Schema.define(version: 20140311025507) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20140307035146) do
     t.string   "recipient_email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "note"
   end
 
   create_table "services", force: true do |t|
@@ -83,11 +84,15 @@ ActiveRecord::Schema.define(version: 20140307035146) do
     t.string   "last_sign_in_ip"
     t.boolean  "admin"
     t.string   "name"
-    t.boolean  "newsletter"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.boolean  "send_newsletter"
     t.string   "provider"
     t.string   "uid"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "facebook_image"
+    t.boolean  "send_deals"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

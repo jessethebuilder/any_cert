@@ -1,0 +1,28 @@
+<div id="current_user">
+  <% if user_signed_in? %>
+    <h2>
+      <%= image_tag current_user.facebook_image unless current_user.facebook_image.blank? %>
+      <%= current_user.name %>
+    </h2>
+  <% else %>
+    <div class="form-group">
+      <%= link_to image_tag('sign_in_fb.png'), '#', :class => 'custom_button facebook_sign_in' %>
+    </div>
+    <hr>
+    <div id="facebook_first_login_prompt">
+
+      <strong>
+        Or <%= link_to 'Login', '#', :id => 'email_login_toggle' %> with just your email address.
+      </strong>
+    </div>
+
+    <%= render :partial => 'devise/sessions/form' %>
+
+    <script>
+        hideOnClickAndShow('#email_login_toggle', '#new_user_session', '#facebook_first_login_prompt');
+    </script>
+
+  <% end %>
+</div>
+
+

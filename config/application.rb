@@ -20,6 +20,7 @@ module Cert
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    ::STORE_OPTS = {:facebook_id => '1405477876366613', :facebook_secret => '411d2788e5cd4d73765b276dfae33476', :facebook_app_name => 'anysoft'}
+    ::STORE_OPTS = {:facebook_id => '1405477876366613', :facebook_secret => '411d2788e5cd4d73765b276dfae33476', :facebook_app_name => 'anysoft',
+                    :facebook_permissions => %w|email|}
   end
 end

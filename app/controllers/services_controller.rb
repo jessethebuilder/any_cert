@@ -1,10 +1,10 @@
 class ServicesController < ApplicationController
-  before_action :set_procedure, only: [:show, :edit, :update, :destroy]
+  before_action :set_service, only: [:show, :edit, :update, :destroy]
 
   # GET /services
   # GET /services.json
   def index
-    @procedures = Service.all
+    @services = Service.all
   end
 
   # GET /services/1
@@ -14,7 +14,7 @@ class ServicesController < ApplicationController
 
   # GET /services/new
   def new
-    @procedure = Service.new
+    @service = Service.new
   end
 
   # GET /services/1/edit
@@ -24,15 +24,15 @@ class ServicesController < ApplicationController
   # POST /services
   # POST /services.json
   def create
-    @procedure = Service.new(procedure_params)
+    @service = Service.new(service_params)
 
     respond_to do |format|
-      if @procedure.save
-        format.html { redirect_to @procedure, notice: 'Service was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @procedure }
+      if @service.save
+        format.html { redirect_to @service, notice: 'Service was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @service }
       else
         format.html { render action: 'new' }
-        format.json { render json: @procedure.errors, status: :unprocessable_entity }
+        format.json { render json: @service.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -41,12 +41,12 @@ class ServicesController < ApplicationController
   # PATCH/PUT /services/1.json
   def update
     respond_to do |format|
-      if @procedure.update(procedure_params)
-        format.html { redirect_to @procedure, notice: 'Service was successfully updated.' }
+      if @service.update(service_params)
+        format.html { redirect_to @service, notice: 'Service was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
-        format.json { render json: @procedure.errors, status: :unprocessable_entity }
+        format.json { render json: @service.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -54,21 +54,21 @@ class ServicesController < ApplicationController
   # DELETE /services/1
   # DELETE /services/1.json
   def destroy
-    @procedure.destroy
+    @service.destroy
     respond_to do |format|
-      format.html { redirect_to procedures_url }
+      format.html { redirect_to services_url }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_procedure
-      @procedure = Service.find(params[:id])
+    def set_service
+      @service = Service.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def procedure_params
-      params.require(:procedure).permit(:name, :description)
+    def service_params
+      params.require(:service).permit(:name, :description)
     end
 end
